@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="1st Annual Pierogi Palooza - A celebration of Northeast Ohio's Favorite Food!">
+    <title>Pierogi Palooza | Parma, Ohio</title>
+
+    <link rel="icon" type="image/png" href="images/icon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+</head>
+
+<body class="font-body bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- ================== TOP BAR ================== -->
+    <header
+        class="fixed top-0 w-full z-50 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-12 sm:h-14">
+
+                <!-- Logo -->
+                <a href="https://www.facebook.com/profile.php?id=61586568915281" class="flex-shrink-0 hover:opacity-80 transition-opacity">
+                    <img src="images/top-logo.png" alt="Logo" class="h-7 sm:h-9 lg:h-10">
+                </a>
+
+                <!-- Center Text -->
+                <div class="flex-1 text-center">
+                    <a href="#other-events"
+                        class="group inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-brand-500/20 to-amber-500/20 border border-amber-400/30 text-amber-300 hover:text-white text-xs sm:text-sm font-medium transition-all duration-300 hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/20">
+                        <i class="fas fa-sparkles text-[10px] animate-spin-slow"></i>
+                        <span>Check out our other events below!</span>
+                        <i class="fas fa-arrow-down text-[10px] animate-bounce"></i>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                    <span class="hidden lg:inline text-white/50 text-xs mr-2">Follow us</span>
+                    <a href="#"
+                        class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 hover:bg-brand-500 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                        <i class="fab fa-facebook-f text-xs sm:text-sm"></i>
+                    </a>
+                    <a href="#"
+                        class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 hover:bg-brand-500 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                        <i class="fab fa-instagram text-xs sm:text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- ================== MAIN NAV ================== -->
+    <nav class="fixed top-12 sm:top-14 w-full z-40 bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="images/logo.png" alt="Pierogi Palooza"
+                    class="h-12 sm:h-14 lg:h-16 group-hover:scale-105 transition-transform duration-300">
+            </a>
+
+            <button id="menuToggle"
+                class="lg:hidden w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition">
+                <i class="fas fa-bars text-gray-700"></i>
+            </button>
+
+            <ul class="hidden lg:flex items-center gap-1">
+                <li><a href="#about"
+                        class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-brand-500 hover:bg-brand-50 transition-all">About</a>
+                </li>
+                <li><a href="#vendors"
+                        class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-brand-500 hover:bg-brand-50 transition-all">Food
+                        Vendors</a></li>
+                <li><a href="#activities"
+                        class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-brand-500 hover:bg-brand-50 transition-all">Activities</a>
+                </li>
+                <li><a href="#sponsors"
+                        class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-brand-500 hover:bg-brand-50 transition-all">Sponsors</a>
+                </li>
+                <li><a href="#location"
+                        class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-brand-500 hover:bg-brand-50 transition-all">Location</a>
+                </li>
+                <li><a href="#other-events"
+                        class="px-4 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-brand-500 hover:bg-brand-50 transition-all">Other
+                        Events</a>
+                </li>
+                <li><a href="#contact"
+                        class="px-5 py-2 rounded-full text-sm font-semibold bg-brand-500 text-white hover:bg-brand-600 transition-all">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileNav" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="p-4 space-y-2">
+                <a href="#about"
+                    class="block py-3 px-4 rounded-xl text-center font-medium text-gray-700 hover:bg-gray-50 transition">About</a>
+                <a href="#vendors"
+                    class="block py-3 px-4 rounded-xl text-center font-medium text-gray-700 hover:bg-gray-50 transition">Food
+                    Vendors</a>
+                <a href="#activities"
+                    class="block py-3 px-4 rounded-xl text-center font-medium text-gray-700 hover:bg-gray-50 transition">Activities</a>
+                <a href="#sponsors"
+                    class="block py-3 px-4 rounded-xl text-center font-medium text-gray-700 hover:bg-gray-50 transition">Sponsors</a>
+                <a href="#location"
+                    class="block py-3 px-4 rounded-xl text-center font-medium text-gray-700 hover:bg-gray-50 transition">Location</a>
+                <a href="#other-events"
+                    class="block py-3 px-4 rounded-xl text-center font-medium text-gray-700 hover:bg-gray-50 transition">Other
+                    Events</a>
+                <a href="#contact"
+                    class="block py-3 px-4 rounded-xl text-center font-semibold bg-brand-500 text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================== HERO ================== -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-32 sm:pt-40 pb-20 overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-cover bg-center opacity-30"
+                style="background-image: url('images/hero-bg.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white"></div>
+            <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-400/20 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-amber-400/20 rounded-full blur-[100px]">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center" id="about">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 mb-6 mt-12 sm:mb-8">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-sm text-brand-600 font-medium">1st Annual Event • Parma, Ohio</span>
+            </div>
+
+            <h1
+                class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight mb-6">
+                <span class="text-gray-900">Pierogi</span>
+                <span class="text-brand-500"> Palooza!</span>
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                A celebration of Northeast Ohio's Favorite Food! Join us for pierogi vendors,
+                eating contests, competitions, and polka dancing.<br><br>Free for everyone! Bring your family and well-behaved pets. 
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                <a href="https://www.eventbrite.com/e/parma-pierogi-palooza-tickets-1981025386258"
+                    class="group w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-brand-500 text-white font-semibold flex items-center justify-center gap-2.5 shadow-lg shadow-brand-500/25 hover:shadow-xl hover:shadow-brand-500/30 hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-ticket-alt group-hover:rotate-12 transition-transform"></i>
+                    Get VIP Tickets
+                </a>
+                <a href="https://www.facebook.com/events/1079988857587609"
+                    class="group w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-blue-600 text-white font-semibold flex items-center justify-center gap-2.5 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-facebook group-hover:scale-110 transition-transform"></i>
+                    RSVP on Facebook
+                </a>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260711T160000Z%2F20260712T220000Z&location=Veteran%27s%20Memorial%20Park%2C%20Parma&text=Parma%20Pierogi%20Palooza"
+                    class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gray-100 text-gray-700 font-semibold flex items-center justify-center gap-2.5 hover:bg-gray-200 hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-calendar-plus"></i>
+                    Add to Calendar
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ================== FOOD & DRINK ================== -->
+    <section id="vendors"
+        class="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-amber-50 to-orange-50 relative overflow-hidden">
+        <!-- Decorative background -->
+        <div class="absolute top-0 left-0 w-80 h-80 bg-brand-400/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-amber-400/15 rounded-full blur-[150px]"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
+                <div>
+                    <span class="text-brand-500 font-semibold text-xs sm:text-sm uppercase tracking-widest">Delicious
+                        Eats</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2">
+                        Food & Drink</h2>
+                </div>
+                <p class="text-gray-500 max-w-md text-base sm:text-lg">Meet our amazing food vendors bringing you the
+                    best pierogis and more!</p>
+            </div>
+
+            <div
+                class="bg-white rounded-2xl sm:rounded-3xl border-2 border-brand-100 shadow-2xl shadow-brand-500/10 p-6 sm:p-8 md:p-10 min-h-[300px]">
+                <script src="https://shareables.ai/api/embed?subdomain=peaceful-ice"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== ACTIVITIES ================== -->
+    <section id="activities"
+        class="py-16 sm:py-20 md:py-28 bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-400/10 rounded-full blur-[100px]"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-14">
+                <span class="text-amber-300 font-semibold text-xs sm:text-sm uppercase tracking-widest">What To
+                    Do</span>
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">
+                    Activities</h2>
+                <p class="text-white/80 mt-4 text-base sm:text-lg">Fun for the whole family!</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-amber-400 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-trophy text-brand-700 text-lg sm:text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Eating Contests</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Think you can out-eat the competition? Sign up for
+                        our pierogi eating contest!</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-amber-400 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-music text-brand-700 text-lg sm:text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Polka Dancing</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Get your dancing shoes ready for live polka music
+                        and dancing all day!</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-amber-400 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-award text-brand-700 text-lg sm:text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Pierogi Competition
+                    </h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Local restaurants compete for Best Pierogi in
+                        Northeast Ohio!</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-amber-400 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-child text-brand-700 text-lg sm:text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Kids Zone</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Face painting, games, and activities for the little
+                        ones!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== SPONSORS ================== -->
+    <section id="sponsors"
+        class="py-16 sm:py-20 md:py-28 bg-gradient-to-br from-gray-900 via-brand-900 to-gray-900 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-[150px]"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-amber-400/15 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/2 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[100px]"></div>
+
+        <!-- Dot pattern overlay -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;20&quot; height=&quot;20&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Ccircle cx=&quot;2&quot; cy=&quot;2&quot; r=&quot;1&quot; fill=&quot;white&quot;/%3E%3C/svg%3E');">
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-14">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/20 text-amber-300 font-semibold text-xs sm:text-sm uppercase tracking-widest mb-4">
+                    <i class="fas fa-star text-[10px]"></i>
+                    Our Partners
+                    <i class="fas fa-star text-[10px]"></i>
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">
+                    <span
+                        class="bg-gradient-to-r from-white via-amber-100 to-white bg-clip-text text-transparent">Sponsors</span>
+                </h2>
+                <p class="text-white/60 mt-4 text-base sm:text-lg max-w-lg mx-auto">Thank you to our amazing sponsors
+                    for making this event possible!</p>
+            </div>
+
+            <!-- Sponsor Logo Slider -->
+            <div class="">
+                <div class="relative overflow-hidden rounded-xl">
+                    <!-- Gradient fade on sides -->
+                    <div
+                        class="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-gray-900/80 to-transparent z-10 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-gray-900/80 to-transparent z-10 pointer-events-none">
+                    </div>
+
+                    <!-- Scrolling container -->
+                    <div class="flex animate-scroll gap-6 sm:gap-8 lg:gap-10 py-4">
+                        <!-- Sponsor 1 -->
+                        <a href="https://parmayps.com/" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/ypofparma.jpg" alt="Sponsor"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 2 -->
+                        <a href="https://sponsor2.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-2.jpg" alt="Acme Co"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 3 -->
+                        <a href="https://sponsor3.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-3.jpg" alt="Taste Foods"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 4 -->
+                        <a href="https://sponsor4.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-4.jpg" alt="Local Biz"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 5 -->
+                        <a href="https://sponsor5.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-5.jpg" alt="First Bank"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 6 -->
+                        <a href="https://sponsor6.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-6.jpg" alt="Auto Motors"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 7 -->
+                        <a href="https://sponsor7.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-7.jpg" alt="Refresh Drinks"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 8 -->
+                        <a href="https://sponsor8.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-8.jpg" alt="Health Plus"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 9 -->
+                        <a href="https://sponsor9.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-9.jpg" alt="Safe Guard"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Sponsor 10 -->
+                        <a href="https://sponsor10.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-10.jpg" alt="Star Media"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+
+                        <!-- Duplicate for seamless loop -->
+                        <a href="https://sponsor1.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-1.jpg" alt="Sponsor"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+                        <a href="https://sponsor2.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-2.jpg" alt="Acme Co"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+                        <a href="https://sponsor3.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-3.jpg" alt="Taste Foods"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+                        <a href="https://sponsor4.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300">
+                                <img src="images/sponsors/sponsor-4.jpg" alt="Local Biz"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+                        <a href="https://sponsor5.com" target="_blank" rel="noopener" class="flex-shrink-0 group">
+                            <div
+                                class="w-36 h-24 sm:w-44 sm:h-28 lg:w-52 lg:h-32 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center p-4 sm:p-5 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-amber-400/30 group-hover:scale-105 group-hover:-translate-y-1">
+                                <img src="images/sponsors/sponsor-5.jpg" alt="First Bank"
+                                    class="max-w-full opacity-80 transition-all duration-300 rounded-xl">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== LOCATION ================== -->
+    <section id="location"
+        class="py-16 sm:py-20 md:py-28 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 relative overflow-hidden">
+        <!-- Decorative -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-400/15 rounded-full blur-[150px]"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-amber-400/20 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-14">
+                <span class="text-brand-500 font-semibold text-xs sm:text-sm uppercase tracking-widest">When &
+                    Where</span>
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-2">Hours
+                    & Location</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-6 sm:gap-8">
+                <!-- Info Cards -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div
+                        class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-brand-100 shadow-lg shadow-brand-500/10 hover:shadow-xl hover:border-brand-300 transition-all duration-300">
+                        <div class="flex items-center gap-4 sm:gap-5">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-calendar-day text-white text-base sm:text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-brand-400 text-xs sm:text-sm font-medium">Saturday</span>
+                                <h3 class="font-heading text-xl sm:text-2xl font-bold text-gray-900">July 11th</h3>
+                                <p class="text-gray-600 text-sm sm:text-base">noon to 8 pm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-brand-100 shadow-lg shadow-brand-500/10 hover:shadow-xl hover:border-brand-300 transition-all duration-300">
+                        <div class="flex items-center gap-4 sm:gap-5">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-calendar-day text-white text-base sm:text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-brand-400 text-xs sm:text-sm font-medium">Sunday</span>
+                                <h3 class="font-heading text-xl sm:text-2xl font-bold text-gray-900">July 12th</h3>
+                                <p class="text-gray-600 text-sm sm:text-base">1 pm to 8 pm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-brand-100 shadow-lg shadow-brand-500/10 hover:shadow-xl hover:border-brand-300 transition-all duration-300">
+                        <div class="flex items-center gap-4 sm:gap-5">
+                            <div
+                                class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-map-marker-alt text-white text-base sm:text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="text-brand-400 text-xs sm:text-sm font-medium">Location</span>
+                                <h3 class="font-heading text-lg sm:text-xl font-bold text-gray-900">
+									<a href="https://maps.app.goo.gl/QBskXefTG9UbPcCj8" target="_blank" rel="noopener">
+										Veterans Memorial Park in Parma, OH
+									</a>
+								</h3>
+                                <p class="text-gray-600 text-sm sm:text-base">
+									
+								</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div
+                    class="lg:col-span-3 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-brand-100 shadow-2xl shadow-brand-500/20 h-64 sm:h-80 lg:h-auto lg:min-h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.2489621357518!2d-81.71823492394016!3d41.390399371299544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef370b8288b3%3A0xf16755ce5a85b7d1!2sVeterans%20Memorial%20Park!5e0!3m2!1sen!2sus!4v1768915693412!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== CONTACT ================== -->
+    <section id="contact" class="py-16 sm:py-20 md:py-28 bg-gray-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 sm:mb-12">
+                <span class="text-brand-400 font-semibold text-xs sm:text-sm uppercase tracking-widest">Get In
+                    Touch</span>
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">Contact
+                    Us</h2>
+                <p class="text-gray-400 mt-4 text-base sm:text-lg">Have questions? Want to be a vendor or sponsor?</p>
+            </div>
+
+            <div class="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl">
+                <script type="text/javascript" src="https://form.jotform.com/jsform/260177218048053"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== OTHER EVENTS SECTION ================== -->
+    <section id="other-events"
+        class="py-16 sm:py-20 md:py-28 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-brand-500/10 rounded-full blur-[150px]"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-amber-400/10 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-amber-400 font-semibold text-xs sm:text-sm uppercase tracking-widest">Explore
+                    More</span>
+                <h2 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">Other
+                    Events</h2>
+                <p class="text-white/60 mt-4 text-base sm:text-lg max-w-2xl mx-auto">Check out our other amazing food
+                    truck festivals happening throughout the year!</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Event Card 1 - Active/Current -->
+                <a href="#"
+                    class="group relative bg-gradient-to-br from-amber-500/20 to-amber-600/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-amber-400/40 hover:border-amber-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20">
+                    
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-amber-400 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-utensils text-gray-900 text-lg sm:text-xl"></i>
+                    </div>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-white mb-2">Tremont Food Truck Festival
+                    </h3>
+                    <div class="flex items-center gap-2 text-amber-400">
+                        <i class="fas fa-calendar-alt text-sm"></i>
+                        <span class="text-sm font-semibold">June 26-28</span>
+                    </div>
+                </a>
+
+                <!-- Event Card 2 -->
+                <a href="#"
+                    class="group relative bg-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-500 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-city text-white text-lg sm:text-xl"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                        Ohio City Food Truck Festival</h3>
+                    <div class="flex items-center gap-2 text-white/50 group-hover:text-white/70 transition-colors">
+                        <i class="fas fa-calendar-alt text-sm"></i>
+                        <span class="text-sm font-medium">July 24-25</span>
+                    </div>
+                </a>
+
+                <!-- Event Card 3 -->
+                <a href="#"
+                    class="group relative bg-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-500 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-map-marker-alt text-white text-lg sm:text-xl"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                        Other Festival</h3>
+                    <div class="flex items-center gap-2 text-white/50 group-hover:text-white/70 transition-colors">
+                        <i class="fas fa-calendar-alt text-sm"></i>
+                        <span class="text-sm font-medium">July 24-25</span>
+                    </div>
+                </a>
+
+                <!-- Event Card 4 -->
+                <a href="#"
+                    class="group relative bg-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-white/10">
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-500 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calendar-alt text-white text-lg sm:text-xl"></i>
+                    </div>
+                    <h3
+                        class="font-heading text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                        Other Festival</h3>
+                    <div class="flex items-center gap-2 text-white/50 group-hover:text-white/70 transition-colors">
+                        <i class="fas fa-calendar-alt text-sm"></i>
+                        <span class="text-sm font-medium">July 24-25</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== FOOTER ================== -->
+    <footer class="py-6 sm:py-8 bg-gray-950 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <p class="text-white/40 text-xs sm:text-sm text-center">&copy; <span id="year"></span> Pierogi Palooza. All
+                rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
